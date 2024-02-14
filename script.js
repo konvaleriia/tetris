@@ -224,6 +224,24 @@ const player = {
     score: 0,
 };
 
+
+document.getElementById('left').addEventListener('click', () => {
+    playerMove(-1);
+});
+
+document.getElementById('right').addEventListener('click', () => {
+    playerMove(1);
+});
+
+document.getElementById('rotate').addEventListener('click', () => {
+    playerRotate(1);
+});
+
+document.getElementById('drop').addEventListener('click', () => {
+    playerDrop();
+});
+
+
 document.addEventListener('keydown', event => {
     if (event.keyCode === 37) {
         playerMove(-1);
